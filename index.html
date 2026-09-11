@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>YumYums: every recipe, on your own device</title>
-<meta name="description" content="A recipe app for iPhone and iPad that collects recipes from links, screenshots, pasted text and other apps into one library on your device. No account, no subscription, and optional sync through your own iCloud.">
+<meta name="description" content="A recipe app for iPhone and iPad that collects recipes from links, screenshots, pasted text, other apps and your own AI assistant into one library on your device. No account, no subscription, and optional sync through your own iCloud.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,6 +16,7 @@
     <nav aria-label="Primary">
       <ul>
         <li><a href="#how">How it works</a></li>
+        <li><a href="#agents">For agents</a></li>
         <li><a href="#questions">Questions</a></li>
         <li><a href="privacy.html">Privacy</a></li>
       </ul>
@@ -29,12 +30,18 @@
     <h1>Every recipe, on your own device</h1>
     <p class="lede">
       You have recipes in six places: a bookmark, a screenshot, a note, an
-      email, someone else's app, a photo of a cookbook page. YumYums collects
-      them into one library on your iPhone, and keeps them there.
+      email, someone else's app, a link you sent your assistant. YumYums
+      collects them into one library on your iPhone, and keeps them there.
     </p>
-    <p><a class="button" href="#">Coming to the App Store</a></p>
+    <p class="buttons">
+      <a class="button" href="#">Coming to the App Store</a>
+      <a class="button secondary" href="#agents">Tell your AI assistant to add recipes</a>
+    </p>
     <p class="price">
-      One payment. No subscription, no account, no server.
+      One payment. No subscription, no account, no server. And the only recipe
+      app your assistant can put recipes into: give it
+      <a href="https://github.com/jonnys87/yumyums-skill">one page</a> and say
+      "install the yumyums skill".
     </p>
   </section>
 
@@ -67,6 +74,20 @@
         Safari, Instagram, TikTok, Notes, Mail. Share into YumYums and it is
         waiting on the Import tab next time you open the app. Share the same
         thing twice and you get one recipe, not two.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>From your AI assistant</h3>
+      <p>
+        Send your assistant a recipe link and say "add this to my app". The
+        recipe arrives on your phone as one small file; tap it and it opens in
+        YumYums on the review screen, ingredients, method and photo filled in,
+        ready to check and save. The tool that builds the file is free and open,
+        works with any assistant that can run a command (Claude Code, Codex,
+        OpenClaw and their like), and the file format is written down so an
+        assistant that cannot run commands can still produce one. See
+        <a href="#agents">for agents</a> below.
       </p>
     </div>
 
@@ -127,6 +148,35 @@
     </p>
   </section>
 
+  <section class="wrap" id="agents">
+    <h2>For agents, and the people who run them</h2>
+
+    <div class="card">
+      <p>
+        A YumYums recipe is a <code>.yumyums</code> file: a zip with a manifest,
+        the recipe as JSON, and an optional photo. The app opens it from
+        Messages, Mail, Files or Safari. That makes the app a place any assistant
+        can put a recipe, with nothing to sign up for and no service in the
+        middle.
+      </p>
+      <p>
+        Setting it up is one sentence. Give your assistant the page below and
+        say "install the yumyums skill". It installs the skill for itself, asks
+        you once how to reach your phone, and from then on "add this recipe to
+        my app" does what it says. It works from Claude Code, Codex, OpenClaw or
+        a plain terminal, and the same page documents the file format for
+        anything that would rather write the file itself.
+      </p>
+      <p>
+        <a class="button" href="https://github.com/jonnys87/yumyums-skill">yumyums-skill on GitHub</a>
+      </p>
+      <p class="price">
+        The app contains no assistant and sends nothing to one. Your assistant
+        is yours; YumYums just opens what it makes.
+      </p>
+    </div>
+  </section>
+
   <section class="wrap" id="questions">
     <h2>Questions worth answering before you buy</h2>
 
@@ -140,6 +190,17 @@
         and moving a collection over from Paprika, works on any supported
         device. If you are buying it only for the AI import, check your device
         first.
+      </dd>
+
+      <dt>Can my AI assistant add recipes for me?</dt>
+      <dd>
+        Yes. Any assistant that can run a command can use the free
+        <a href="#agents">yumyums-skill</a> to turn a link or pasted text into a
+        recipe file and send it to your phone; you tap the file and check the
+        recipe before it is saved, the same review screen every import gets.
+        An assistant that cannot run commands can still write the file, because
+        the format is documented. The app never talks to the assistant and
+        never sends your recipes anywhere.
       </dd>
 
       <dt>Does it sync between my phone and my iPad?</dt>
