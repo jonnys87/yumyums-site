@@ -31,27 +31,29 @@
     <p class="lede">
       You have recipes in six places: a bookmark, a screenshot, a note, an
       email, someone else's app, a link you sent your assistant. YumYums
-      collects them into one library on your iPhone, and keeps them there.
+      collects them into one library on your iPhone or iPad, ready to open offline.
+      Add your own cooking photos and make it yours.
     </p>
     <p class="buttons">
-      <a class="button" href="https://apps.apple.com/app/id6802465306">Download on the App Store</a>
+      <a class="button" href="https://apps.apple.com/app/apple-store/id6802465306?pt=129196404&amp;ct=yy_site_demo_202610&amp;mt=8">Get YumYums on the App Store</a>
       <a class="button secondary" href="#agents">Tell your AI assistant to add recipes</a>
     </p>
     <p class="price">
-      One payment. No subscription, no account, no server. And the only recipe
-      app your assistant can put recipes into: give it
+      £4.99 once in the UK. No subscription or YumYums account.
+      For iPhone and iPad running iOS or iPadOS 26 or later.
+      Your AI assistant can add recipes too: give it
       <a href="https://github.com/jonnys87/yumyums-skill">one page</a> and say
       "install the yumyums skill".
     </p>
   </section>
 
-  <div class="shots">
-    <img src="screenshots/01-library.png" width="294" height="640" loading="lazy" decoding="async"
-         alt="The YumYums recipe library on an iPhone, showing six recipe cards in a grid with photos, cooking times and serving counts.">
-    <img src="screenshots/04-shopping.png" width="294" height="640" loading="lazy" decoding="async"
-         alt="A shopping list with 29 items, each showing a quantity, a grocery name, and the recipe it came from.">
-    <img src="screenshots/03-planner.png" width="294" height="640" loading="lazy" decoding="async"
-         alt="A seven day meal plan, with a recipe on Monday, Tuesday and Thursday and a free-text entry on Wednesday.">
+  <div class="shots" aria-label="YumYums screenshots">
+    <img src="screenshots/01-library.png" width="1320" height="2868" loading="lazy" decoding="async"
+         alt="Your own private recipe box: six saved recipes with photos, cooking times and servings in the YumYums iPhone library.">
+    <img src="screenshots/03-planner.png" width="1320" height="2868" loading="lazy" decoding="async"
+         alt="A plan for the week: saved recipes arranged across the meal plan, with leftovers on Wednesday and two recipes on Saturday.">
+    <img src="screenshots/04-shopping.png" width="1320" height="2868" loading="lazy" decoding="async"
+         alt="Your meals make the list: 34 shopping items grouped in aisle order, showing quantities and the recipes they came from.">
   </div>
 
   <section class="wrap" id="how">
@@ -133,7 +135,17 @@
 
     <p>
       <strong>Cook Mode</strong> gives you one step at a time in large type and
-      stops the screen going dark halfway through folding something in.
+      keeps the screen awake. Start several timers and they keep counting when
+      you change steps or leave the app. Allow notifications for alerts when
+      they finish. Switch on <strong>hands-free</strong> to say "next", "back"
+      or "repeat"; speech recognition runs on your device, after any needed
+      language model download.
+    </p>
+    <p>
+      <strong>Your own photos and notes.</strong> Add up to six photos to a recipe
+      and choose the lead image. Keep a note after cooking, mark favourites,
+      and find them again next time. Tonight and Shopping widgets and Siri
+      shortcuts help you get to dinner and your list.
     </p>
     <p>
       <strong>The meal plan</strong> is seven days and nothing more complicated.
@@ -171,8 +183,9 @@
         <a class="button" href="https://github.com/jonnys87/yumyums-skill">yumyums-skill on GitHub</a>
       </p>
       <p class="price">
-        The app contains no assistant and sends nothing to one. Your assistant
-        is yours; YumYums just opens what it makes.
+        YumYums uses Apple’s on-device AI for import; it does not connect to
+        your external assistant. Your assistant is yours; YumYums opens the
+        recipe files it makes.
       </p>
     </div>
   </section>
@@ -208,11 +221,11 @@
         Yes, if you switch it on. Sync is off when you install the app and
         there is a switch for it in Settings. With it on, your recipes, meal
         plan and shopping list are kept in your own iCloud account, so both
-        devices show the same collection; with it off, YumYums does not connect
-        to iCloud at all. Either way there is no account to make with us and no
+        devices show the same collection; with it off, YumYums does not sync
+        your library to iCloud. Your device backup is controlled separately by iOS.
+        Either way there is no account to make with us and no
         server of ours in the middle: it is your iCloud, your storage, and
-        nobody else can see it. It is also the newest part of the app, so if
-        you are buying it for that in particular, it is the thing to try first.
+        we have no access to it.
       </dd>
 
       <dt>Is there an iPad version?</dt>
@@ -232,12 +245,17 @@
         which anything can open.
       </dd>
 
-      <dt>Does it convert grams to ounces?</dt>
+      <dt>Can I switch between metric and US measures?</dt>
       <dd>
-        No. It keeps whatever units the recipe used, and the AI import is
-        specifically instructed never to convert anything, because a model that
-        does arithmetic on your ingredients is a model that can get your
-        ingredients wrong.
+        Yes. Choose Metric, US or As written on the recipe screen. YumYums
+        converts readable ingredient measures and measures or temperatures in
+        the method for display; your saved source recipe stays unchanged.
+        Grams can become ounces or pounds, or cups for supported dry ingredients.
+        Millilitres become cups or spoons. Cups become grams only for known
+        dry ingredients, otherwise millilitres. Existing teaspoons and tablespoons,
+        ambiguous pints and quarts, cans, and amounts such as "to taste" stay
+        as written. Conversions are rounded for cooking, so check the source
+        when precision matters. AI import itself preserves the source units.
       </dd>
 
       <dt>How accurate is the AI import?</dt>
@@ -251,8 +269,12 @@
 
       <dt>What does it send anywhere?</dt>
       <dd>
-        The page you asked it to fetch, and the photo on that page. That is the
-        whole list. See <a href="privacy.html">the privacy page</a>.
+        When you import a link, it requests the recipe page and its photos
+        from that site. Optional sync sends your library to your own private
+        iCloud account. Hands-free may download an Apple speech model before
+        its first use; recognition then runs on your device. On-device AI import
+        sends no prompt or result to a service. See
+        <a href="privacy.html">the privacy page</a>.
       </dd>
     </dl>
   </section>

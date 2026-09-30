@@ -28,29 +28,33 @@
     YumYums collects no personal data. There is no account, no analytics, no
     advertising and no server belonging to us for anything to be sent to.
   </p>
-  <p><strong>Last updated: 12 August 2026. Applies to YumYums for iOS, version 1.0.</strong></p>
+  <p><strong>Last updated: 30 September 2026. Applies to YumYums for iOS and iPadOS, version 1.1.0.</strong></p>
 
   <h2>What YumYums stores, and where</h2>
   <p>
     Your recipes, their photos, your meal plan and your shopping list are
     written to storage belonging to the app, on your iPhone or iPad. They are
-    not sent anywhere. They are included in your device backup, whether that is
+    sent to your own private iCloud database only if you enable sync.
+    They are included in your device backup, whether that is
     iCloud Backup or an encrypted backup to your own computer, because that is
     how iOS backs up every app. That backup is between you and Apple; we have no
     access to it.
   </p>
   <p>
-    Deleting the app removes all of it. So does "Erase all recipes and lists" in
-    Settings inside the app, and if you have sync switched on that erases the
-    copy in your iCloud and on your other device with it. There is no copy
-    anywhere else, which is worth knowing before you tap it.
+    Deleting the app removes its local data; it does not by itself erase
+    an existing iCloud copy or your device backups. "Erase all recipes and lists" in
+    Settings inside the app removes the app’s recipes and lists, and if you
+    have sync switched on that erases the
+    synced copy in your iCloud and on your other devices. Copies you exported
+    and existing device backups are managed separately.
   </p>
 
   <h2>iCloud sync, if you switch it on</h2>
   <p>
     YumYums can keep your library in step across your own iPhone and iPad. It is
     <strong>off when you install the app</strong> and there is a switch for it in
-    Settings. While it is off, the app makes no connection to iCloud at all.
+    Settings. While it is off, the app does not sync your library to iCloud.
+    iCloud Backup is a separate iOS setting.
   </p>
   <p>
     With it on, your recipes and their photographs, your meal plan and your
@@ -70,7 +74,7 @@
   </p>
 
   <h2>When YumYums uses the network</h2>
-  <p>There are three cases, and every one of them follows from something you did:</p>
+  <p>These network uses follow from features you choose:</p>
   <ul>
     <li>
       <strong>Fetching a recipe page.</strong> When you paste a link, share one
@@ -86,19 +90,26 @@
       that switch on. That traffic goes to Apple, on your behalf, into storage
       only you can read. See the section above.
     </li>
+    <li>
+      <strong>Preparing hands-free speech recognition.</strong> Apple’s speech
+      framework may download a language model when you first enable hands-free.
+      Once ready, recognition runs on your device; your microphone audio is
+      not uploaded.
+    </li>
   </ul>
   <p>
-    Those requests go to the recipe site, not to us. The site will see them the
+    Page and photo requests go to the recipe site, not to us. The site sees them the
     way it sees any web browser: an IP address, a request for a page, the time
     of day. That is a normal consequence of visiting a web page and it is
     governed by that site's own privacy policy, not this one. Nothing about you
     or your library is attached to the request.
   </p>
   <p>
-    Nothing else in YumYums touches the network. The library, the meal plan, the
-    shopping list, search, Cook Mode and the import preview all work with the
+    Your saved library, the meal plan, the
+    shopping list, search and Cook Mode work with the
     device in flight mode, sync switched on or not: syncing is something the app
-    catches up on when there is a connection, never something it waits for.
+    catches up on when there is a connection. Hands-free needs its language
+    model installed first, and link import needs a connection to fetch the page.
   </p>
 
   <h2>The on-device AI import</h2>
@@ -117,7 +128,8 @@
     <dd>
       YumYums never asks for access to your photo library. The screenshot import
       uses the system picker, which runs outside the app and hands over only the
-      specific images you selected. The app cannot see anything else in your
+      specific images you selected, whether for screenshot import or adding
+      your own recipe photos. The app cannot see anything else in your
       library and does not hold a permission to try.
     </dd>
 
@@ -126,14 +138,32 @@
       Only if you choose "Export to Reminders" on the shopping list. iOS asks
       you first. If you allow it, YumYums writes your unchecked shopping items
       into a Reminders list called "Shopping list" on your device. It does not
-      read your existing reminders and it sends nothing anywhere. If you decline,
+      read your existing reminder items. Your chosen Reminders account may sync
+      that list through its own service. If you decline,
       the shopping list carries on working inside the app.
+    </dd>
+
+    <dt>Microphone and speech recognition</dt>
+    <dd>
+      Requested when you enable hands-free in Cook Mode. Audio is processed
+      on your device to recognise cooking commands. YumYums does not save
+      recordings or send the audio to a server. Hands-free starts off each
+      time you open Cook Mode; you can stop it at any time. If you decline
+      permission, you can still use the on-screen cooking controls.
+    </dd>
+
+    <dt>Notifications and Live Activities</dt>
+    <dd>
+      The first timer asks for notification permission so YumYums can alert
+      you when it finishes. These are local alerts, not server messages.
+      If you decline, the timer still counts down without a notification alert.
+      A Live Activity can show running timers on the Lock Screen, subject to
+      your device settings.
     </dd>
 
     <dt>Anything else</dt>
     <dd>
-      There is nothing else. No location, no contacts, no microphone, no camera,
-      no health data, no notifications, no calendar.
+      No location, contacts, camera, health data or calendar access.
     </dd>
   </dl>
 
@@ -153,9 +183,9 @@
   <h2>Children</h2>
   <p>
     YumYums is rated 4+ and collects nothing from anyone, of any age. It has no
-    chat, no user-to-user features, no in-app purchases and no links out except
-    the "Open original recipe" button, which hands the address of a recipe you
-    imported to Safari, where your own Screen Time settings apply.
+    chat, no user-to-user features and no in-app purchases.
+    Opening an original recipe hands its address to
+    Safari, where your own Screen Time settings apply.
   </p>
 
   <h2>Your rights</h2>
