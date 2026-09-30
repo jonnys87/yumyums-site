@@ -228,3 +228,20 @@ footer a { color: var(--accent); }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; }
 }
+
+/* Portrait demo stays readable without filling a desktop screen. */
+.demo { padding-block: 0.5rem 1.5rem; }
+.demo h2 { margin-top: 1rem; }
+.demo video {
+  display: block;
+  width: 100%;
+  max-width: 22rem;
+  height: auto;
+  margin: 1.25rem auto 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.demo-transcript { margin: 1rem 0 1.5rem; }
+.demo-transcript summary { cursor: pointer; padding-block: 0.5rem; color: var(--accent); }
+.demo-transcript ol { padding-left: 1.5rem; margin-top: 1rem; }
